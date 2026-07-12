@@ -1,0 +1,120 @@
+import React from "react";
+import { Button } from "./components/ui/button";
+import { Calendar } from "./components/ui/calendar";
+import "./App.css";
+
+const App = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white">
+      {/* Navbar */}
+      <header className="border-b border-white/10 backdrop-blur-md">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-5">
+          <h1 className="text-2xl font-bold tracking-wide">
+            Task<span className="text-red-500">Flow</span>
+          </h1>
+
+          <Button variant="secondary">Get Started</Button>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-12 px-8 py-20 lg:flex-row">
+        {/* Left Side */}
+        <div className="max-w-xl">
+          <span className="rounded-full border border-red-500/30 bg-red-500/10 px-4 py-2 text-sm text-red-400">
+            🚀 Productivity Dashboard
+          </span>
+
+          <h1 className="mt-6 text-6xl font-extrabold leading-tight">
+            Organize your work
+            <span className="block text-red-500">Effortlessly.</span>
+          </h1>
+
+          <p className="mt-6 text-lg leading-8 text-slate-300">
+            Manage meetings, schedules, and tasks from one beautiful dashboard.
+            Designed with React, Tailwind CSS and shadcn/ui components.
+          </p>
+
+          <div className="mt-10 flex gap-5">
+            <Button size="lg">Start Now</Button>
+
+            <Button variant="outline" size="lg">
+              Learn More
+            </Button>
+          </div>
+
+          <div className="mt-10 flex gap-10 text-center">
+            <div>
+              <h2 className="text-3xl font-bold">10K+</h2>
+              <p className="text-slate-400">Users</p>
+            </div>
+
+            <div>
+              <h2 className="text-3xl font-bold">99.9%</h2>
+              <p className="text-slate-400">Uptime</p>
+            </div>
+
+            <div>
+              <h2 className="text-3xl font-bold">24/7</h2>
+              <p className="text-slate-400">Support</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Side */}
+        <div className="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur-xl">
+          <h2 className="mb-5 text-center text-2xl font-semibold">
+            Schedule Meeting
+          </h2>
+
+          <Calendar className="rounded-md" />
+
+          <Button className="mt-6 w-full">
+            Book Appointment
+          </Button>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="mx-auto grid max-w-7xl gap-8 px-8 pb-20 md:grid-cols-3">
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-8 transition hover:scale-105 hover:bg-white/10">
+          <h3 className="mb-3 text-2xl font-semibold">
+            📅 Smart Scheduling
+          </h3>
+
+          <p className="text-slate-300">
+            Easily manage meetings with an elegant calendar interface.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-8 transition hover:scale-105 hover:bg-white/10">
+          <h3 className="mb-3 text-2xl font-semibold">
+            ⚡ Fast Performance
+          </h3>
+
+          <p className="text-slate-300">
+            Built with React + Vite for lightning-fast development and user
+            experience.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-8 transition hover:scale-105 hover:bg-white/10">
+          <h3 className="mb-3 text-2xl font-semibold">
+            🔒 Secure Platform
+          </h3>
+
+          <p className="text-slate-300">
+            Modern architecture with scalable components and secure workflows.
+          </p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-white/10 py-8 text-center text-slate-400">
+        © 2026 TaskFlow. Built with React + Tailwind + shadcn/ui
+      </footer>
+    </div>
+  );
+};
+
+export default App;
