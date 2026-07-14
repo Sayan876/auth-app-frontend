@@ -16,6 +16,7 @@ import type RegisterData from "@/models/RegisterData";
 import { useNavigate } from "react-router";
 import { Alert, AlertTitle } from "@/components/ui/alert";
 import { Spinner } from "@/components/ui/spinner";
+import Oauth2buttons from "@/components/ui/Oauth2buttons";
 
 
 const Signup = () => {
@@ -222,25 +223,7 @@ const Signup = () => {
         </span>
       </div>
 
-      {/* Google */}
-      <Button
-        type="button"
-        variant="outline"
-        className="w-full h-10 transition-all hover:scale-[1.02] cursor-pointer"
-      >
-        <FaGoogle className="mr-3 text-red-500" />
-        Continue with Google
-      </Button>
-
-      {/* GitHub */}
-      <Button
-        type="button"
-        variant="outline"
-        className="w-full h-10 transition-all hover:scale-[1.02] cursor-pointer"
-      >
-        <FaGithub className="mr-3 text-lg" />
-        Continue with GitHub
-      </Button>
+      <Oauth2buttons/>
     </form>
   </CardContent>
 </Card>

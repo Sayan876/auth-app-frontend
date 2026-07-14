@@ -17,6 +17,7 @@ import { loginUser } from "@/services/AuthService";
 import { Alert, AlertTitle } from "@/components/ui/alert";
 import { Spinner } from "@/components/ui/spinner";
 import useAuth from "@/auth/store";
+import Oauth2buttons from "@/components/ui/Oauth2buttons";
 
 
 
@@ -115,7 +116,7 @@ const Login = () => {
           <AlertTitle>
             {error?.response
               ? error?.response?.data?.message
-              : error?.message}
+              : "Network Error"}
           </AlertTitle>
         </Alert>
       </div>
@@ -196,25 +197,9 @@ const Login = () => {
         </span>
       </div>
 
-      {/* Google Login */}
-      <Button
-        type="button"
-        variant="outline"
-        className="w-full h-10 transition-all hover:scale-[1.02] cursor-pointer"
-      >
-        <FaGoogle className="mr-3 text-red-500" />
-        Continue with Google
-      </Button>
+      <Oauth2buttons/>
 
-      {/* GitHub Login */}
-      <Button
-        type="button"
-        variant="outline"
-        className="w-full h-10 transition-all hover:scale-[1.02] cursor-pointer"
-      >
-        <FaGithub className="mr-3 text-lg" />
-        Continue with GitHub
-      </Button>
+
 
       {/* Footer */}
       <div className="flex items-center justify-between text-sm">
