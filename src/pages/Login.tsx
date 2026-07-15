@@ -6,14 +6,14 @@ import { Separator } from "../components/ui/separator";
 import { motion } from "framer-motion";
 
 import { CheckCircle2Icon, Mail} from "lucide-react";
-import { FaGoogle, FaGithub } from "react-icons/fa";
+
 
 import { Eye, EyeOff, Lock } from "lucide-react";
 import { useState, type FormEvent } from "react";
 import { NavLink, useNavigate } from "react-router";
 import type LoginData from "@/models/LoginData";
 import toast from "react-hot-toast";
-import { loginUser } from "@/services/AuthService";
+
 import { Alert, AlertTitle } from "@/components/ui/alert";
 import { Spinner } from "@/components/ui/spinner";
 import useAuth from "@/auth/store";

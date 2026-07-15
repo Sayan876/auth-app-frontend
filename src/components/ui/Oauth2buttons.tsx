@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Button } from './button'
 import { FaGithub, FaGoogle } from 'react-icons/fa'
 import { NavLink } from 'react-router'
