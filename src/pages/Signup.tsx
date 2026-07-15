@@ -6,7 +6,7 @@ import { Separator } from "../components/ui/separator";
 import { motion } from "framer-motion";
 
 import { CheckCircle2Icon, Mail, User} from "lucide-react";
-import { FaGoogle, FaGithub } from "react-icons/fa";
+
 
 import { Eye, EyeOff, Lock } from "lucide-react";
 import { useState } from "react";
@@ -125,7 +125,7 @@ const Signup = () => {
           <AlertTitle>
             {error?.response
               ? error?.response?.data?.message
-              : error?.message}
+              : "Network Error"}
           </AlertTitle>
         </Alert>
       </div>
