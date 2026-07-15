@@ -14,11 +14,14 @@ import UserHome from './pages/users/UserHome.tsx';
 import Userprofile from './pages/users/Userprofile.tsx';
 import OauthSuccess from './pages/OauthSuccess.tsx';
 import OauthFailure from './pages/OauthFailure.tsx';
+import ThemeProvider from './components/ThemeProvider.tsx';
 
 
 
 createRoot(document.getElementById('root')!).render(
- <BrowserRouter>
+  <ThemeProvider>
+
+  <BrowserRouter>
   <Routes>
 
     <Route path='/' element = {<RootLayout/>} > 
@@ -37,4 +40,6 @@ createRoot(document.getElementById('root')!).render(
 
   </Routes>
  </BrowserRouter>
+
+</ThemeProvider>
 )
