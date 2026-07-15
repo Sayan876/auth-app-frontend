@@ -30,7 +30,7 @@ const Signup = () => {
   const navigate = useNavigate();
 
   const [loading,setLoading] = useState<boolean>(false);
-  const [error, setError] = useState(null)
+  const [error, setError] = useState<any>(null);
 
   const handleInputChange =(event:React.ChangeEvent<HTMLInputElement>)=>{
      //console.log(event.target.name);
@@ -123,9 +123,7 @@ const Signup = () => {
         <Alert variant="destructive">
           <CheckCircle2Icon className="h-4 w-4" />
           <AlertTitle>
-            {error?.response
-              ? error?.response?.data?.message
-              : "Network Error"}
+            {(error as any)?.response?.data?.message ?? "Network Error"}
           </AlertTitle>
         </Alert>
       </div>

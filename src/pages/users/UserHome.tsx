@@ -29,14 +29,19 @@ const user = useAuth((state) => state.user);
 const [user1, setUser1] = useState<UserT | null>(null);
 
 const getUserData = async () => {
-  try {
-    const user1 = await getCurrentUser(user?.email);
+  if (!user?.email) {
+    toast.error("User email not found");
+    return;
+  }
 
-    setUser1(user1);
-    toast.success("Success!You are able to hit protected APIs")
+  try {
+    const response = await getCurrentUser(user.email);
+
+    setUser1(response);
+    toast.success("Success! You are able to hit protected APIs");
   } catch (error) {
     console.log(error);
-    toast.error("error in getting data");
+    toast.error("Error in getting data");
   }
 };
   return (
